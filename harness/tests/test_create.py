@@ -42,15 +42,13 @@ def test_create_trims_title_before_validation_and_storage(create_todo):
         {"title": "valid", "completed": "false"},
     ],
 )
-def test_create_rejects_invalid_values(api_client, payload):
-    response = api_client.post("/todos", json=payload)
+def test_create_rejects_invalid_values(post_todo, payload):
+    response = post_todo(payload)
     assert response.status_code == 422
     assert_error_response(response)
 
 
-def test_create_rejects_unknown_fields(api_client):
-    response = api_client.post(
-        "/todos", json={"title": "unknown field", "unexpected": True}
-    )
+def test_create_rejects_unknown_fields(post_todo):
+    response = post_todo({"title": "unknown field", "unexpected": True})
     assert response.status_code == 422
     assert_error_response(response)
