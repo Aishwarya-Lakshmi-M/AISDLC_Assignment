@@ -1,0 +1,201 @@
+openapi: 3.1.0
+info:
+  title: Todo REST API
+  version: 1.0.0
+paths:
+  /todos:
+    get:
+      summary: List todo tasks
+      operationId: listTodos
+      responses:
+        "200":
+          description: Task collection sorted by ascending created_at, then task ID
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/TodoTask"
+        "500":
+          $ref: "#/components/responses/StorageError"
+    post:
+      summary: Create a todo task
+      operationId: createTodo
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateTodo"
+      responses:
+        "201":
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TodoTask"
+        "422":
+          $ref: "#/components/responses/ValidationError"
+        "500":
+          $ref: "#/components/responses/StorageError"
+  /todos/{todoId}:
+    parameters:
+      - name: todoId
+        in: path
+        required: true
+        description: UUID-formatted Todo identity
+        schema:
+          type: string
+          format: uuid
+    get:
+      summary: Retrieve a todo task
+      operationId: getTodo
+      responses:
+        "200":
+          description: Task found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TodoTask"
+        "400":
+          $ref: "#/components/responses/InvalidTodoId"
+        "404":
+          $ref: "#/components/responses/NotFoundError"
+        "500":
+          $ref: "#/components/responses/StorageError"
+    patch:
+      summary: Update a todo task
+      operationId: updateTodo
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateTodo"
+      responses:
+        "200":
+          description: Task updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TodoTask"
+        "400":
+          $ref: "#/components/responses/InvalidTodoId"
+        "422":
+          $ref: "#/components/responses/ValidationError"
+        "404":
+          $ref: "#/components/responses/NotFoundError"
+        "500":
+          $ref: "#/components/responses/StorageError"
+    delete:
+      summary: Delete a todo task
+      operationId: deleteTodo
+      responses:
+        "204":
+          description: Task deleted
+        "400":
+          $ref: "#/components/responses/InvalidTodoId"
+        "404":
+          $ref: "#/components/responses/NotFoundError"
+        "500":
+          $ref: "#/components/responses/StorageError"
+components:
+  schemas:
+    TodoTask:
+      type: object
+      additionalProperties: false
+      required: [id, title, description, completed, created_at, updated_at]
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+          minLength: 1
+          maxLength: 200
+        description:
+          type: string
+          maxLength: 2000
+        completed:
+          type: boolean
+        created_at:
+          type: string
+          format: date-time
+          description: UTC timestamp generated automatically and immutable after creation
+        updated_at:
+          type: string
+          format: date-time
+          description: UTC timestamp generated automatically and changed after an update
+    CreateTodo:
+      type: object
+      additionalProperties: false
+      required: [title]
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 200
+        description:
+          type: string
+          maxLength: 2000
+        completed:
+          type: boolean
+    UpdateTodo:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 200
+        description:
+          type: string
+          maxLength: 2000
+        completed:
+          type: boolean
+    Error:
+      type: object
+      additionalProperties: false
+      required: [code, message]
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        details:
+          type: array
+          items:
+            type: object
+            additionalProperties: false
+            required: [field, message]
+            properties:
+              field:
+                type: string
+              message:
+                type: string
+  responses:
+    InvalidTodoId:
+      description: Todo identity is not a valid UUID
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+    ValidationError:
+      description: Request validation failed
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+    NotFoundError:
+      description: A validly formatted Todo identity was not found
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+    StorageError:
+      description: Unexpected JSON persistence read or write failure
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
