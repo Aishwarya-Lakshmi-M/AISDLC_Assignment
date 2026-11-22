@@ -95,10 +95,23 @@ The initial defect output is retrospective; it is not an original saved log.
 
 ## 8. Final human review
 
-- [ ] Specification and implementation reviewed.
-- [ ] Test evidence reviewed.
-- [ ] Harness findings and fixes reviewed.
-- [ ] SAST findings reviewed.
-- [ ] Limitations acknowledged.
+- [x] Specification and implementation reviewed.
+- [x] Test evidence reviewed.
+- [x] Harness findings and fixes reviewed.
+- [x] SAST findings reviewed.
+- [x] Limitations acknowledged.
 
-**Final decision:** UNDECIDED — a human reviewer must select **ACCEPT** or **REJECT**.
+### Final decision: ACCEPT
+
+The implementation is accepted based on the completed specification, implementation review,
+independent black-box validation, regression tests, lint and formatting checks, and scoped
+SAST results.
+
+The initial harness failures exposed genuine validation defects. These were repaired, regression
+tests were added, and the final harness run passed with 28 passed and 1 skipped.
+
+The remaining limitations are acknowledged: the manual restart persistence check was skipped,
+the app/contract run had a non-blocking deprecation warning, and the scoped Bandit report
+contains 67 Low B101 findings in test code.
+
+Acceptance is based on the recorded evidence and the review of these limitations.
