@@ -1,5 +1,4 @@
 import pytest
-
 from assertions import assert_error_response, assert_todo_shape
 
 
@@ -15,9 +14,7 @@ def test_create_accepts_optional_fields_and_boundary_lengths(create_todo):
     title = "t" * 200
     description = "d" * 2000
     todo = assert_todo_shape(
-        create_todo(
-            {"title": title, "description": description, "completed": True}
-        )
+        create_todo({"title": title, "description": description, "completed": True})
     )
 
     assert todo["title"] == title

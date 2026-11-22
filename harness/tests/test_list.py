@@ -12,9 +12,7 @@ def test_list_returns_array_and_orders_todos(create_todo, api_client):
     for todo in todos:
         assert_todo_shape(todo)
 
-    ordering_keys = [
-        (parse_utc_timestamp(todo["created_at"]), todo["id"]) for todo in todos
-    ]
+    ordering_keys = [(parse_utc_timestamp(todo["created_at"]), todo["id"]) for todo in todos]
     assert ordering_keys == sorted(ordering_keys), ordering_keys
 
     listed_by_id = {todo["id"]: todo for todo in todos}

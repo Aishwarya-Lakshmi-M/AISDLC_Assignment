@@ -1,11 +1,8 @@
 import pytest
-
 from assertions import assert_error_response, assert_todo_shape, parse_utc_timestamp
 
 
-def test_patch_applies_partial_changes_and_preserves_creation_timestamp(
-    create_todo, api_client
-):
+def test_patch_applies_partial_changes_and_preserves_creation_timestamp(create_todo, api_client):
     original = create_todo(
         {
             "title": "harness before update",
@@ -24,9 +21,7 @@ def test_patch_applies_partial_changes_and_preserves_creation_timestamp(
     assert updated["description"] == original["description"]
     assert updated["completed"] is original["completed"]
     assert updated["created_at"] == original["created_at"]
-    assert parse_utc_timestamp(updated["updated_at"]) >= parse_utc_timestamp(
-        original["updated_at"]
-    )
+    assert parse_utc_timestamp(updated["updated_at"]) >= parse_utc_timestamp(original["updated_at"])
 
 
 def test_patch_accepts_empty_description_and_false_completion(create_todo, api_client):
@@ -47,9 +42,7 @@ def test_patch_accepts_empty_description_and_false_completion(create_todo, api_c
     assert updated["description"] == ""
     assert updated["completed"] is False
     assert updated["created_at"] == original["created_at"]
-    assert parse_utc_timestamp(updated["updated_at"]) >= parse_utc_timestamp(
-        original["updated_at"]
-    )
+    assert parse_utc_timestamp(updated["updated_at"]) >= parse_utc_timestamp(original["updated_at"])
 
 
 @pytest.mark.parametrize(
@@ -63,14 +56,10 @@ def test_patch_accepts_empty_description_and_false_completion(create_todo, api_c
         {"completed": "false"},
     ],
 )
-def test_patch_rejects_invalid_or_unsupported_fields(
-    api_client, create_todo, payload
-):
+def test_patch_rejects_invalid_or_unsupported_fields(api_client, create_todo, payload):
     original = create_todo({"title": "harness rejected update"})
 
-    response = api_client.patch(
-        "/todos/{}".format(original["id"]), json=payload
-    )
+    response = api_client.patch("/todos/{}".format(original["id"]), json=payload)
     assert response.status_code == 422
     assert_error_response(response)
 
@@ -89,8 +78,6 @@ def test_patch_malformed_id_returns_400(api_client):
 def test_patch_unknown_valid_uuid_returns_404(api_client):
     from uuid import uuid4
 
-    response = api_client.patch(
-        "/todos/{}".format(uuid4()), json={"title": "updated"}
-    )
+    response = api_client.patch(f"/todos/{uuid4()}", json={"title": "updated"})
     assert response.status_code == 404
     assert_error_response(response)

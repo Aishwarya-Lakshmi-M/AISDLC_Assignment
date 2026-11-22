@@ -1,6 +1,7 @@
 import os
+from collections.abc import Callable
 from pathlib import Path
-from typing import Any, Callable, Dict, List, Set
+from typing import Any
 from urllib.parse import quote
 
 import httpx
@@ -18,32 +19,29 @@ def api_client(api_base_url: str) -> httpx.Client:
         try:
             response = client.get("/todos")
         except httpx.HTTPError as exc:
-            pytest.fail("Todo API is not reachable at {}: {}".format(api_base_url, exc))
+            pytest.fail(f"Todo API is not reachable at {api_base_url}: {exc}")
         if response.status_code != 200:
             pytest.fail(
-                "Todo API readiness check GET /todos returned {}: {}".format(
-                    response.status_code, response.text
-                )
+                f"Todo API readiness check GET /todos returned {response.status_code}: "
+                f"{response.text}"
             )
         yield client
 
 
 @pytest.fixture
-def preexisting_todo_ids(api_client: httpx.Client) -> Set[str]:
+def preexisting_todo_ids(api_client: httpx.Client) -> set[str]:
     response = api_client.get("/todos")
     assert response.status_code == 200, response.text
     todos = response.json()
     assert isinstance(todos, list), todos
     return {
-        todo["id"]
-        for todo in todos
-        if isinstance(todo, dict) and isinstance(todo.get("id"), str)
+        todo["id"] for todo in todos if isinstance(todo, dict) and isinstance(todo.get("id"), str)
     }
 
 
 @pytest.fixture
-def created_todo_ids(api_client: httpx.Client) -> List[str]:
-    todo_ids: List[str] = []
+def created_todo_ids(api_client: httpx.Client) -> list[str]:
+    todo_ids: list[str] = []
     yield todo_ids
 
     failures = []
@@ -51,14 +49,10 @@ def created_todo_ids(api_client: httpx.Client) -> List[str]:
         try:
             response = api_client.delete("/todos/{}".format(quote(todo_id, safe="")))
         except httpx.HTTPError as exc:
-            failures.append("DELETE {} failed: {}".format(todo_id, exc))
+            failures.append(f"DELETE {todo_id} failed: {exc}")
             continue
         if response.status_code not in (204, 404):
-            failures.append(
-                "DELETE {} returned {}: {}".format(
-                    todo_id, response.status_code, response.text
-                )
-            )
+            failures.append(f"DELETE {todo_id} returned {response.status_code}: {response.text}")
 
     if failures:
         pytest.fail("Harness cleanup failed:\n{}".format("\n".join(failures)))
@@ -71,10 +65,10 @@ def created_todo_ids(api_client: httpx.Client) -> List[str]:
 @pytest.fixture
 def post_todo(
     api_client: httpx.Client,
-    preexisting_todo_ids: Set[str],
-    created_todo_ids: List[str],
-) -> Callable[[Dict[str, Any]], httpx.Response]:
-    def post(payload: Dict[str, Any]) -> httpx.Response:
+    preexisting_todo_ids: set[str],
+    created_todo_ids: list[str],
+) -> Callable[[dict[str, Any]], httpx.Response]:
+    def post(payload: dict[str, Any]) -> httpx.Response:
         response = api_client.post("/todos", json=payload)
         if response.is_success:
             body = response.json()
@@ -93,9 +87,9 @@ def post_todo(
 
 @pytest.fixture
 def create_todo(
-    post_todo: Callable[[Dict[str, Any]], httpx.Response]
-) -> Callable[..., Dict[str, Any]]:
-    def create(payload: Dict[str, Any]) -> Dict[str, Any]:
+    post_todo: Callable[[dict[str, Any]], httpx.Response],
+) -> Callable[..., dict[str, Any]]:
+    def create(payload: dict[str, Any]) -> dict[str, Any]:
         response = post_todo(payload)
         assert response.status_code == 201, response.text
         body = response.json()

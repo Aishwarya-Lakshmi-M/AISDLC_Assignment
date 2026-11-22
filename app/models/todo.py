@@ -1,7 +1,13 @@
 from datetime import datetime
+from typing import Annotated
 from uuid import UUID
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StringConstraints
+
+TodoTitle = Annotated[
+    str,
+    StringConstraints(strip_whitespace=True, min_length=1, max_length=200),
+]
 
 
 class TodoTask(BaseModel):
@@ -18,17 +24,17 @@ class TodoTask(BaseModel):
 class CreateTodo(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
-    title: str = Field(min_length=1, max_length=200)
+    title: TodoTitle
     description: str = Field(default="", max_length=2000)
-    completed: bool = False
+    completed: StrictBool = False
 
 
 class UpdateTodo(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
-    title: str | None = Field(default=None, min_length=1, max_length=200)
+    title: TodoTitle | None = None
     description: str | None = Field(default=None, max_length=2000)
-    completed: bool | None = None
+    completed: StrictBool | None = None
 
 
 class ErrorDetails(BaseModel):

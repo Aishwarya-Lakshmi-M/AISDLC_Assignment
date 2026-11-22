@@ -1,0 +1,689 @@
+Run started:2026-11-22 14:43:43.684518+00:00
+
+Test results:
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:15:4
+14	def parse_utc_timestamp(value: Any) -> datetime:
+15	    assert isinstance(value, str), value
+16	    normalized = value[:-1] + "+00:00" if value.endswith("Z") else value
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:18:4
+17	    parsed = datetime.fromisoformat(normalized)
+18	    assert parsed.tzinfo is not None, value
+19	    assert parsed.utcoffset() == UTC.utcoffset(parsed), value
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:19:4
+18	    assert parsed.tzinfo is not None, value
+19	    assert parsed.utcoffset() == UTC.utcoffset(parsed), value
+20	    return parsed.astimezone(UTC)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:24:4
+23	def assert_todo_shape(todo: Any) -> dict[str, Any]:
+24	    assert isinstance(todo, dict), todo
+25	    assert set(todo) == TODO_FIELDS, todo
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:25:4
+24	    assert isinstance(todo, dict), todo
+25	    assert set(todo) == TODO_FIELDS, todo
+26	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:28:4
+27	    todo_id = todo["id"]
+28	    assert isinstance(todo_id, str), todo
+29	    # UUID parsing is deliberately independent of the application's code.
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:34:4
+33	
+34	    assert isinstance(todo["title"], str), todo
+35	    assert 1 <= len(todo["title"]) <= 200, todo
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:35:4
+34	    assert isinstance(todo["title"], str), todo
+35	    assert 1 <= len(todo["title"]) <= 200, todo
+36	    assert isinstance(todo["description"], str), todo
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:36:4
+35	    assert 1 <= len(todo["title"]) <= 200, todo
+36	    assert isinstance(todo["description"], str), todo
+37	    assert len(todo["description"]) <= 2000, todo
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:37:4
+36	    assert isinstance(todo["description"], str), todo
+37	    assert len(todo["description"]) <= 2000, todo
+38	    assert isinstance(todo["completed"], bool), todo
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:38:4
+37	    assert len(todo["description"]) <= 2000, todo
+38	    assert isinstance(todo["completed"], bool), todo
+39	    parse_utc_timestamp(todo["created_at"])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:45:4
+44	def assert_error_response(response: Any) -> dict[str, Any]:
+45	    assert response.headers.get("content-type", "").startswith("application/json")
+46	    error = response.json()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:47:4
+46	    error = response.json()
+47	    assert isinstance(error, dict), error
+48	    assert set(error).issubset({"code", "message", "details"}), error
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:48:4
+47	    assert isinstance(error, dict), error
+48	    assert set(error).issubset({"code", "message", "details"}), error
+49	    assert isinstance(error.get("code"), str) and error["code"], error
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:49:4
+48	    assert set(error).issubset({"code", "message", "details"}), error
+49	    assert isinstance(error.get("code"), str) and error["code"], error
+50	    assert isinstance(error.get("message"), str) and error["message"], error
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:50:4
+49	    assert isinstance(error.get("code"), str) and error["code"], error
+50	    assert isinstance(error.get("message"), str) and error["message"], error
+51	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:53:8
+52	    if "details" in error:
+53	        assert isinstance(error["details"], list), error
+54	        for detail in error["details"]:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:55:12
+54	        for detail in error["details"]:
+55	            assert isinstance(detail, dict), detail
+56	            assert set(detail) == {"field", "message"}, detail
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:56:12
+55	            assert isinstance(detail, dict), detail
+56	            assert set(detail) == {"field", "message"}, detail
+57	            assert isinstance(detail["field"], str), detail
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:57:12
+56	            assert set(detail) == {"field", "message"}, detail
+57	            assert isinstance(detail["field"], str), detail
+58	            assert isinstance(detail["message"], str), detail
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\assertions.py:58:12
+57	            assert isinstance(detail["field"], str), detail
+58	            assert isinstance(detail["message"], str), detail
+59	    return error
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\conftest.py:34:4
+33	    response = api_client.get("/todos")
+34	    assert response.status_code == 200, response.text
+35	    todos = response.json()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\conftest.py:36:4
+35	    todos = response.json()
+36	    assert isinstance(todos, list), todos
+37	    return {
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\conftest.py:94:8
+93	        response = post_todo(payload)
+94	        assert response.status_code == 201, response.text
+95	        body = response.json()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\conftest.py:97:8
+96	        todo_id = body.get("id")
+97	        assert isinstance(todo_id, str), body
+98	        return body
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_create.py:8:4
+7	
+8	    assert todo["title"] == "harness default values"
+9	    assert todo["description"] == ""
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_create.py:9:4
+8	    assert todo["title"] == "harness default values"
+9	    assert todo["description"] == ""
+10	    assert todo["completed"] is False
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_create.py:10:4
+9	    assert todo["description"] == ""
+10	    assert todo["completed"] is False
+11	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_create.py:20:4
+19	
+20	    assert todo["title"] == title
+21	    assert todo["description"] == description
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_create.py:21:4
+20	    assert todo["title"] == title
+21	    assert todo["description"] == description
+22	    assert todo["completed"] is True
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_create.py:22:4
+21	    assert todo["description"] == description
+22	    assert todo["completed"] is True
+23	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_create.py:27:4
+26	    todo = assert_todo_shape(create_todo({"title": "  trimmed title  "}))
+27	    assert todo["title"] == "trimmed title"
+28	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_create.py:44:4
+43	    response = post_todo(payload)
+44	    assert response.status_code == 422
+45	    assert_error_response(response)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_create.py:50:4
+49	    response = post_todo({"title": "unknown field", "unexpected": True})
+50	    assert response.status_code == 422
+51	    assert_error_response(response)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_delete.py:10:4
+9	    response = api_client.delete("/todos/{}".format(todo["id"]))
+10	    assert response.status_code == 204
+11	    assert response.content == b""
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_delete.py:11:4
+10	    assert response.status_code == 204
+11	    assert response.content == b""
+12	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_delete.py:14:4
+13	    get_response = api_client.get("/todos/{}".format(todo["id"]))
+14	    assert get_response.status_code == 404
+15	    assert_error_response(get_response)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_delete.py:20:4
+19	    response = api_client.delete("/todos/not-a-uuid")
+20	    assert response.status_code == 400
+21	    assert_error_response(response)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_delete.py:26:4
+25	    response = api_client.delete(f"/todos/{uuid4()}")
+26	    assert response.status_code == 404
+27	    assert_error_response(response)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_list.py:9:4
+8	    response = api_client.get("/todos")
+9	    assert response.status_code == 200, response.text
+10	    todos = response.json()
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_list.py:11:4
+10	    todos = response.json()
+11	    assert isinstance(todos, list), todos
+12	    for todo in todos:
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_list.py:16:4
+15	    ordering_keys = [(parse_utc_timestamp(todo["created_at"]), todo["id"]) for todo in todos]
+16	    assert ordering_keys == sorted(ordering_keys), ordering_keys
+17	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_list.py:19:4
+18	    listed_by_id = {todo["id"]: todo for todo in todos}
+19	    assert first["id"] in listed_by_id
+20	    assert second["id"] in listed_by_id
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_list.py:20:4
+19	    assert first["id"] in listed_by_id
+20	    assert second["id"] in listed_by_id
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_persistence.py:40:4
+39	    response = api_client.get(f"/todos/{todo_id}")
+40	    assert response.status_code == 200, response.text
+41	    todo = assert_todo_shape(response.json())
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_persistence.py:42:4
+41	    todo = assert_todo_shape(response.json())
+42	    assert todo["id"] == todo_id
+43	    assert todo["title"] == state["title"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_persistence.py:43:4
+42	    assert todo["id"] == todo_id
+43	    assert todo["title"] == state["title"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_retrieve.py:10:4
+9	    response = api_client.get("/todos/{}".format(created["id"]))
+10	    assert response.status_code == 200, response.text
+11	    retrieved = assert_todo_shape(response.json())
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_retrieve.py:12:4
+11	    retrieved = assert_todo_shape(response.json())
+12	    assert retrieved == created
+13	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_retrieve.py:17:4
+16	    response = api_client.get("/todos/not-a-uuid")
+17	    assert response.status_code == 400
+18	    assert_error_response(response)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_retrieve.py:23:4
+22	    response = api_client.get(f"/todos/{uuid4()}")
+23	    assert response.status_code == 404
+24	    assert_error_response(response)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:17:4
+16	    )
+17	    assert response.status_code == 200, response.text
+18	    updated = assert_todo_shape(response.json())
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:20:4
+19	
+20	    assert updated["title"] == "harness after update"
+21	    assert updated["description"] == original["description"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:21:4
+20	    assert updated["title"] == "harness after update"
+21	    assert updated["description"] == original["description"]
+22	    assert updated["completed"] is original["completed"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:22:4
+21	    assert updated["description"] == original["description"]
+22	    assert updated["completed"] is original["completed"]
+23	    assert updated["created_at"] == original["created_at"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:23:4
+22	    assert updated["completed"] is original["completed"]
+23	    assert updated["created_at"] == original["created_at"]
+24	    assert parse_utc_timestamp(updated["updated_at"]) >= parse_utc_timestamp(original["updated_at"])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:24:4
+23	    assert updated["created_at"] == original["created_at"]
+24	    assert parse_utc_timestamp(updated["updated_at"]) >= parse_utc_timestamp(original["updated_at"])
+25	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:39:4
+38	    )
+39	    assert response.status_code == 200, response.text
+40	    updated = assert_todo_shape(response.json())
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:42:4
+41	
+42	    assert updated["description"] == ""
+43	    assert updated["completed"] is False
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:43:4
+42	    assert updated["description"] == ""
+43	    assert updated["completed"] is False
+44	    assert updated["created_at"] == original["created_at"]
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:44:4
+43	    assert updated["completed"] is False
+44	    assert updated["created_at"] == original["created_at"]
+45	    assert parse_utc_timestamp(updated["updated_at"]) >= parse_utc_timestamp(original["updated_at"])
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:45:4
+44	    assert updated["created_at"] == original["created_at"]
+45	    assert parse_utc_timestamp(updated["updated_at"]) >= parse_utc_timestamp(original["updated_at"])
+46	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:63:4
+62	    response = api_client.patch("/todos/{}".format(original["id"]), json=payload)
+63	    assert response.status_code == 422
+64	    assert_error_response(response)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:67:4
+66	    unchanged_response = api_client.get("/todos/{}".format(original["id"]))
+67	    assert unchanged_response.status_code == 200, unchanged_response.text
+68	    unchanged = assert_todo_shape(unchanged_response.json())
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:69:4
+68	    unchanged = assert_todo_shape(unchanged_response.json())
+69	    assert unchanged == original
+70	
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:74:4
+73	    response = api_client.patch("/todos/not-a-uuid", json={"title": "updated"})
+74	    assert response.status_code == 400
+75	    assert_error_response(response)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b101_assert_used.html
+   Location: harness\tests\test_update.py:82:4
+81	    response = api_client.patch(f"/todos/{uuid4()}", json={"title": "updated"})
+82	    assert response.status_code == 404
+83	    assert_error_response(response)
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 549
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 67
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 67
+Files skipped (0):

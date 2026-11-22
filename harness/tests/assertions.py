@@ -1,6 +1,5 @@
-from datetime import datetime, timezone
-from typing import Any, Dict
-
+from datetime import UTC, datetime
+from typing import Any
 
 TODO_FIELDS = {
     "id",
@@ -17,11 +16,11 @@ def parse_utc_timestamp(value: Any) -> datetime:
     normalized = value[:-1] + "+00:00" if value.endswith("Z") else value
     parsed = datetime.fromisoformat(normalized)
     assert parsed.tzinfo is not None, value
-    assert parsed.utcoffset() == timezone.utc.utcoffset(parsed), value
-    return parsed.astimezone(timezone.utc)
+    assert parsed.utcoffset() == UTC.utcoffset(parsed), value
+    return parsed.astimezone(UTC)
 
 
-def assert_todo_shape(todo: Any) -> Dict[str, Any]:
+def assert_todo_shape(todo: Any) -> dict[str, Any]:
     assert isinstance(todo, dict), todo
     assert set(todo) == TODO_FIELDS, todo
 
@@ -42,7 +41,7 @@ def assert_todo_shape(todo: Any) -> Dict[str, Any]:
     return todo
 
 
-def assert_error_response(response: Any) -> Dict[str, Any]:
+def assert_error_response(response: Any) -> dict[str, Any]:
     assert response.headers.get("content-type", "").startswith("application/json")
     error = response.json()
     assert isinstance(error, dict), error
