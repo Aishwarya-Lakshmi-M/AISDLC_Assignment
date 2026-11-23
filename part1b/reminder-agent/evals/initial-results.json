@@ -1,0 +1,655 @@
+{
+  "pipeline": "dataset -> AI application -> structural checks -> behavioral/invariant checks -> semantic checks -> aggregate score -> PASS/FAIL",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "dataset_path": "C:\\Users\\Aishwarya Lakshmi M\\Desktop\\aisdlc_assignment\\part1b\\reminder-agent\\evals\\dataset.json",
+  "case_count": 20,
+  "per_case": [
+    {
+      "case_id": "RA-001",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-002",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-003",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-004",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-005",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-006",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-007",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-008",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-009",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-010",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-011",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-012",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-013",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-014",
+      "raw_output": null,
+      "infrastructure_error": "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 32.463905s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '32s'}]}}",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 32.463905s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '32s'}]}}"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 32.463905s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '32s'}]}}"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 32.463905s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash-lite', 'location': 'global'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '32s'}]}}"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-015",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-016",
+      "raw_output": null,
+      "infrastructure_error": "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 31.299971052s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '31s'}]}}",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 31.299971052s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '31s'}]}}"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 31.299971052s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '31s'}]}}"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 31.299971052s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '31s'}]}}"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-017",
+      "raw_output": null,
+      "infrastructure_error": "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 31.101773957s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '31s'}]}}",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 31.101773957s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '31s'}]}}"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 31.101773957s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '31s'}]}}"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 31.101773957s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '31s'}]}}"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-018",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-019",
+      "raw_output": null,
+      "infrastructure_error": "ValueError: AI output must be one valid JSON object",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ValueError: AI output must be one valid JSON object"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-020",
+      "raw_output": null,
+      "infrastructure_error": "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 29.108750912s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 29.108750912s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 29.108750912s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 29.108750912s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-3.5-flash-lite'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '29s'}]}}"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    }
+  ],
+  "gates": {
+    "structural": false,
+    "behavioral": false,
+    "safety": false,
+    "semantic": false,
+    "per_case": false
+  },
+  "counts": {
+    "structural_pass": 0,
+    "behavioral_pass": 0,
+    "safety_pass": 0,
+    "overall_pass": 0
+  },
+  "semantic_percentage": 0.0,
+  "outcome": "FAIL",
+  "evaluation_timestamp": "2026-11-22T18:09:30.764254+00:00",
+  "usage": {
+    "available": false,
+    "note": "The SDK response usage metadata was not retained by the adapter"
+  },
+  "configuration": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "api_key_environment_variable": "GEMINI_API_KEY",
+    "api_key_recorded": false
+  }
+}

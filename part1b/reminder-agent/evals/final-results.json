@@ -1,0 +1,777 @@
+{
+  "pipeline": "dataset -> AI application -> structural checks -> behavioral/invariant checks -> semantic checks -> aggregate score -> PASS/FAIL",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "dataset_path": "C:\\Users\\Aishwarya Lakshmi M\\Desktop\\aisdlc_assignment\\part1b\\reminder-agent\\evals\\dataset.json",
+  "case_count": 20,
+  "per_case": [
+    {
+      "case_id": "RA-001",
+      "raw_output": null,
+      "infrastructure_error": "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-002",
+      "raw_output": null,
+      "infrastructure_error": "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-003",
+      "raw_output": {
+        "title": "Submit the report",
+        "date": null,
+        "time": "00:00",
+        "status": "needs_clarification",
+        "clarification": "Which date should I use for this reminder?"
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": true,
+        "failures": []
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": true,
+        "earned": 90,
+        "available": 90,
+        "percentage": 100.0,
+        "dimensions": {
+          "title": 15,
+          "date": 15,
+          "time": 15,
+          "missing_ambiguous": 15,
+          "clarification": 15,
+          "preservation": 15,
+          "unsupported": 0
+        }
+      },
+      "overall_pass": true
+    },
+    {
+      "case_id": "RA-004",
+      "raw_output": null,
+      "infrastructure_error": "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-005",
+      "raw_output": null,
+      "infrastructure_error": "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-006",
+      "raw_output": null,
+      "infrastructure_error": "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}",
+      "structural": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "safety": {
+        "pass": false,
+        "failures": [
+          "ClientError: 400 Bad Request. {'message': '<html><title>Error 400 (Bad Request)!!1</title></html>', 'status': 'Bad Request'}"
+        ]
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 0,
+        "available": 75,
+        "percentage": 0.0,
+        "dimensions": {}
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-007",
+      "raw_output": {
+        "title": "Buy groceries",
+        "date": null,
+        "time": "19:00",
+        "status": "needs_clarification",
+        "clarification": "Which date should I use for this reminder?"
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": true,
+        "failures": []
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": true,
+        "earned": 90,
+        "available": 90,
+        "percentage": 100.0,
+        "dimensions": {
+          "title": 15,
+          "date": 15,
+          "time": 15,
+          "missing_ambiguous": 15,
+          "clarification": 15,
+          "preservation": 15,
+          "unsupported": 0
+        }
+      },
+      "overall_pass": true
+    },
+    {
+      "case_id": "RA-008",
+      "raw_output": {
+        "title": "Renew my passport",
+        "date": "2026-12-10",
+        "time": null,
+        "status": "needs_clarification",
+        "clarification": "What time should I use for this reminder?"
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": true,
+        "failures": []
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": true,
+        "earned": 90,
+        "available": 90,
+        "percentage": 100.0,
+        "dimensions": {
+          "title": 15,
+          "date": 15,
+          "time": 15,
+          "missing_ambiguous": 15,
+          "clarification": 15,
+          "preservation": 15,
+          "unsupported": 0
+        }
+      },
+      "overall_pass": true
+    },
+    {
+      "case_id": "RA-009",
+      "raw_output": {
+        "title": null,
+        "date": "2026-11-23",
+        "time": "17:00",
+        "status": "needs_clarification",
+        "clarification": "What activity should this reminder be for?"
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": true,
+        "failures": []
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": true,
+        "earned": 90,
+        "available": 90,
+        "percentage": 100.0,
+        "dimensions": {
+          "title": 15,
+          "date": 15,
+          "time": 15,
+          "missing_ambiguous": 15,
+          "clarification": 15,
+          "preservation": 15,
+          "unsupported": 0
+        }
+      },
+      "overall_pass": true
+    },
+    {
+      "case_id": "RA-010",
+      "raw_output": {
+        "title": "Call the office",
+        "date": "2026-11-27",
+        "time": null,
+        "status": "needs_clarification",
+        "clarification": "What time should I use for this reminder?"
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": true,
+        "failures": []
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": true,
+        "earned": 90,
+        "available": 90,
+        "percentage": 100.0,
+        "dimensions": {
+          "title": 15,
+          "date": 15,
+          "time": 15,
+          "missing_ambiguous": 15,
+          "clarification": 15,
+          "preservation": 15,
+          "unsupported": 0
+        }
+      },
+      "overall_pass": true
+    },
+    {
+      "case_id": "RA-011",
+      "raw_output": {
+        "title": "Join the webinar",
+        "date": null,
+        "time": null,
+        "status": "needs_clarification",
+        "clarification": "Do you mean 6 AM or 6 PM? Which date should I use?"
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": false,
+        "failures": [
+          "preservation of known date"
+        ]
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": false,
+        "earned": 65,
+        "available": 90,
+        "percentage": 72.22,
+        "dimensions": {
+          "title": 15,
+          "date": 0,
+          "time": 15,
+          "missing_ambiguous": 10,
+          "clarification": 15,
+          "preservation": 10,
+          "unsupported": 0
+        }
+      },
+      "overall_pass": false
+    },
+    {
+      "case_id": "RA-012",
+      "raw_output": {
+        "title": "Submit the form",
+        "date": "2026-11-23",
+        "time": null,
+        "status": "needs_clarification",
+        "clarification": "Should this reminder be at 6 PM or 9 AM?"
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": true,
+        "failures": []
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": true,
+        "earned": 90,
+        "available": 90,
+        "percentage": 100.0,
+        "dimensions": {
+          "title": 15,
+          "date": 15,
+          "time": 15,
+          "missing_ambiguous": 15,
+          "clarification": 15,
+          "preservation": 15,
+          "unsupported": 0
+        }
+      },
+      "overall_pass": true
+    },
+    {
+      "case_id": "RA-013",
+      "raw_output": {
+        "title": "Back up files",
+        "date": null,
+        "time": null,
+        "status": "needs_clarification",
+        "clarification": "Please provide an explicit reference date and timezone."
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": true,
+        "failures": []
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": true,
+        "earned": 90,
+        "available": 90,
+        "percentage": 100.0,
+        "dimensions": {
+          "title": 15,
+          "date": 15,
+          "time": 15,
+          "missing_ambiguous": 15,
+          "clarification": 15,
+          "preservation": 15,
+          "unsupported": 0
+        }
+      },
+      "overall_pass": true
+    },
+    {
+      "case_id": "RA-014",
+      "raw_output": {
+        "title": null,
+        "date": null,
+        "time": null,
+        "status": "needs_clarification",
+        "clarification": "What reminder would you like to create?"
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": true,
+        "failures": []
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": true,
+        "earned": 90,
+        "available": 90,
+        "percentage": 100.0,
+        "dimensions": {
+          "title": 15,
+          "date": 15,
+          "time": 15,
+          "missing_ambiguous": 15,
+          "clarification": 15,
+          "preservation": 15,
+          "unsupported": 0
+        }
+      },
+      "overall_pass": true
+    },
+    {
+      "case_id": "RA-015",
+      "raw_output": {
+        "title": null,
+        "date": null,
+        "time": null,
+        "status": "needs_clarification",
+        "clarification": "What reminder would you like to create?"
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": true,
+        "failures": []
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": true,
+        "earned": 90,
+        "available": 90,
+        "percentage": 100.0,
+        "dimensions": {
+          "title": 15,
+          "date": 15,
+          "time": 15,
+          "missing_ambiguous": 15,
+          "clarification": 15,
+          "preservation": 15,
+          "unsupported": 0
+        }
+      },
+      "overall_pass": true
+    },
+    {
+      "case_id": "RA-016",
+      "raw_output": {
+        "title": null,
+        "date": null,
+        "time": null,
+        "status": "needs_clarification",
+        "clarification": "The following requested operations are unsupported: deleting reminders. This application can only create reminder details."
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": true,
+        "failures": []
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": true,
+        "earned": 95,
+        "available": 100,
+        "percentage": 95.0,
+        "dimensions": {
+          "title": 15,
+          "date": 15,
+          "time": 15,
+          "missing_ambiguous": 15,
+          "clarification": 10,
+          "preservation": 15,
+          "unsupported": 10
+        }
+      },
+      "overall_pass": true
+    },
+    {
+      "case_id": "RA-017",
+      "raw_output": {
+        "title": null,
+        "date": null,
+        "time": null,
+        "status": "needs_clarification",
+        "clarification": "The following requested operations are unsupported: sending notifications and calendar integration. This application can only create reminder details."
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": true,
+        "failures": []
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": true,
+        "earned": 95,
+        "available": 100,
+        "percentage": 95.0,
+        "dimensions": {
+          "title": 15,
+          "date": 15,
+          "time": 15,
+          "missing_ambiguous": 15,
+          "clarification": 10,
+          "preservation": 15,
+          "unsupported": 10
+        }
+      },
+      "overall_pass": true
+    },
+    {
+      "case_id": "RA-018",
+      "raw_output": {
+        "title": null,
+        "date": null,
+        "time": null,
+        "status": "needs_clarification",
+        "clarification": "The following requested operations are unsupported: snoozing reminders. This application can only create reminder details."
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": true,
+        "failures": []
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": true,
+        "earned": 95,
+        "available": 100,
+        "percentage": 95.0,
+        "dimensions": {
+          "title": 15,
+          "date": 15,
+          "time": 15,
+          "missing_ambiguous": 15,
+          "clarification": 10,
+          "preservation": 15,
+          "unsupported": 10
+        }
+      },
+      "overall_pass": true
+    },
+    {
+      "case_id": "RA-019",
+      "raw_output": {
+        "title": null,
+        "date": null,
+        "time": null,
+        "status": "needs_clarification",
+        "clarification": "The following requested operations are unsupported: persistence. This application can only create reminder details."
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": true,
+        "failures": []
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": true,
+        "earned": 95,
+        "available": 100,
+        "percentage": 95.0,
+        "dimensions": {
+          "title": 15,
+          "date": 15,
+          "time": 15,
+          "missing_ambiguous": 15,
+          "clarification": 10,
+          "preservation": 15,
+          "unsupported": 10
+        }
+      },
+      "overall_pass": true
+    },
+    {
+      "case_id": "RA-020",
+      "raw_output": {
+        "title": "Call Alex",
+        "date": "2026-11-23",
+        "time": null,
+        "status": "needs_clarification",
+        "clarification": "The following requested operations are unsupported: rescheduling reminders. This application can only create reminder details."
+      },
+      "infrastructure_error": null,
+      "structural": {
+        "pass": true,
+        "failures": []
+      },
+      "behavioral": {
+        "pass": true,
+        "failures": []
+      },
+      "safety": {
+        "pass": true,
+        "failures": []
+      },
+      "semantic": {
+        "pass": true,
+        "earned": 95,
+        "available": 100,
+        "percentage": 95.0,
+        "dimensions": {
+          "title": 15,
+          "date": 15,
+          "time": 15,
+          "missing_ambiguous": 15,
+          "clarification": 10,
+          "preservation": 15,
+          "unsupported": 10
+        }
+      },
+      "overall_pass": true
+    }
+  ],
+  "gates": {
+    "structural": false,
+    "behavioral": false,
+    "safety": false,
+    "semantic": false,
+    "per_case": false
+  },
+  "counts": {
+    "structural_pass": 15,
+    "behavioral_pass": 14,
+    "safety_pass": 15,
+    "overall_pass": 14
+  },
+  "semantic_percentage": 72.36,
+  "outcome": "FAIL",
+  "evaluation_timestamp": "2026-11-23T10:04:58.676063+00:00",
+  "evaluation_configuration": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "inter_request_delay_seconds": 5.0,
+    "api_key_source": "GEMINI_API_KEY"
+  },
+  "usage": {
+    "available": false,
+    "note": "The SDK did not expose usage metadata to the harness"
+  }
+}

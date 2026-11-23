@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evaluation-input.schema.json",
+  "title": "Reminder Evaluation Input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["text", "reference_datetime", "timezone"],
+  "properties": {
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reference_datetime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "timezone": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

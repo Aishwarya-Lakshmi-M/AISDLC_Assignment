@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "reminder-result.schema.json",
+  "title": "Reminder Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "date", "time", "status", "clarification"],
+  "properties": {
+    "title": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "date": {
+      "type": ["string", "null"],
+      "format": "date"
+    },
+    "time": {
+      "type": ["string", "null"],
+      "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["ready", "needs_clarification"]
+    },
+    "clarification": {
+      "type": ["string", "null"],
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "ready"
+          }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "time": {
+            "type": "string",
+            "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+          },
+          "clarification": {
+            "const": null
+          }
+        },
+        "required": ["title", "date", "time", "clarification"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "needs_clarification"
+          }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "clarification": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": ["clarification"]
+      }
+    }
+  ]
+}

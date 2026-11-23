@@ -1,0 +1,20 @@
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Reminder Agent Evaluation",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.harness.evaluation",
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "env": {
+                "GEMINI_API_KEY": "${env:GEMINI_API_KEY}",
+                "GEMINI_MODEL": "gemini-3.5-flash-lite"
+            },
+            "justMyCode": false
+        }
+    ]
+}
